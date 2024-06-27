@@ -14,14 +14,18 @@
   font-family: "Poppins", sans-serif;
 }
 
-
 :root {
   --main-color: #033a80;
   --bg-color: #fff;
   --text-color: #0f0c27;
   --hover: hsl(260, 100%, 51%);
-  --shadow: rgba(87, 87, 87, .4);
-  --shadow-2: rgba(45, 45, 47, .4);
+  --shadow: rgba(87, 87, 87, 0.4);
+  --shadow-2: rgba(45, 45, 47, 0.4);
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+  background: #380dd5;
 }
 
 section {
@@ -31,7 +35,7 @@ section {
 body.active {
   --text-color: #fff;
   --bg-color: #0f0c27;
-  --shadow-2: #07A473;
+  --shadow-2: #07a473;
 }
 
 body {
@@ -40,7 +44,7 @@ body {
 }
 
 section {
-  padding: .8rem;
+  padding: 0.8rem;
 }
 
 *::selection {
@@ -68,7 +72,7 @@ header {
   z-index: 100;
   justify-content: space-between;
   align-items: center;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   background: var(--bg-color);
   box-shadow: 1px 0px 3px 2px var(--shadow);
 }
@@ -91,14 +95,14 @@ header {
 
 .navbar {
   display: flex;
-  gap: .5rem;
-  height:2rem;
+  gap: 0.5rem;
+  height: 2rem;
   align-items: center;
 }
 
 #darkmode {
   transition: 1s;
-
+  cursor: pointer;
 }
 
 #darkmode.fa-sun {
@@ -112,7 +116,6 @@ header {
 
 .navbar div a {
   color: var(--text-color);
-  font-weight: bold;
 }
 
 @media (max-width: 768px) {
@@ -132,12 +135,11 @@ header {
     top: 3rem;
     left: 0;
     background: var(--bg-color);
-    transition: .4s ease;
+    transition: 0.4s ease;
   }
 
   .active {
     height: 18rem !important;
-
   }
 
   #darkmode {
@@ -193,7 +195,7 @@ header {
 }
 
 .social a {
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
   font-size: 22px;
   color: var(--text-color);
 }
@@ -214,9 +216,7 @@ header {
   background: var(--hover);
 }
 
-
 @media (max-width: 768px) {
-
   .home {
     grid-template-columns: 0.5fr 3fr;
   }
@@ -251,7 +251,7 @@ header {
 
 .about-text {
   color: var(--text-color);
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .about-container .information {
@@ -260,19 +260,18 @@ header {
   font-weight: 400;
   margin-bottom: 1rem;
 }
-.info-box{
-  font-size: .8rem;
+.info-box {
+  font-size: 0.8rem;
 }
-.info-box i{
-  padding-right: .5rem;
+.info-box i {
+  padding-right: 0.5rem;
 }
-
 
 @media (max-width: 780px) {
   .about-container {
     grid-template-columns: repeat(1, 1fr);
   }
-  .about-text{
+  .about-text {
     font-size: 1rem;
   }
   .info-box {
@@ -305,14 +304,14 @@ header {
   position: absolute;
   background: rgba(128, 86, 206, 1);
   width: 100%;
-  height: .5rem;
-  border-radius: .5rem;
+  height: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .percent-bar {
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   position: absolute;
-  height: .5rem;
+  height: 0.5rem;
   background: rgba(32, 10, 100, 1);
 }
 
@@ -342,7 +341,6 @@ header {
   .skills-container {
     grid-template-columns: 1fr;
   }
-  
 }
 
 /* service containt */
@@ -361,18 +359,18 @@ header {
   justify-content: center;
   align-items: center;
   line-height: 2rem;
-  padding: .2rem;
+  padding: 0.2rem;
   width: 14rem;
   height: 10rem;
   background: var(--bg-color);
   box-shadow: 0px 0px 2px var(--shadow-2);
   border-bottom: 2px solid var(--main-color);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   transition: 1s ease;
 }
 
 .services-box:hover {
-  background: var(--main-color)
+  background: var(--main-color);
 }
 
 .services-box i {
@@ -408,7 +406,7 @@ header {
   overflow: hidden;
   border: 1px solid var(--text-color);
   box-shadow: 1px 1px 3px var(--shadow-2);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 .portfolio-img img {
@@ -436,24 +434,24 @@ header {
 .contact-form form input {
   height: 3rem;
   width: 100%;
-  padding-left: .3rem;
-  background: #97E3DC;
+  padding-left: 0.3rem;
+  background: #97e3dc;
   border: none;
-  border-radius: .3rem
+  border-radius: 0.3rem;
 }
 
 .contact-form form textarea {
-  padding-top: .5rem;
-  padding-left: .3rem;
-  background: #97E3DC;
+  padding-top: 0.5rem;
+  padding-left: 0.3rem;
+  background: #97e3dc;
   border: none;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
 }
 
 .contact-form form input::placeholder,
 .contact-form form textarea::placeholder {
   color: #000;
-  font-weight: 400
+  font-weight: 400;
 }
 
 .contact-form form .contact-button {
@@ -461,7 +459,6 @@ header {
   font-weight: 500;
   margin-left: 32%;
   background: var(--main-color);
-
 }
 
 @media (max-width: 768px) {
@@ -476,35 +473,33 @@ header {
   align-items: center;
   justify-content: center;
   height: 8rem;
-  padding: .5rem;
-  background: #B5B5BD;
+  padding: 0.5rem;
+  background: #b5b5bd;
   margin-top: 4rem;
 }
-.footer-social{
+.footer-social {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  
 }
-.footer-social i{
+.footer-social i {
   background: var(--bg-color);
-  padding: .5rem;
+  padding: 0.5rem;
   width: 2rem;
   height: 2rem;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   font-size: 1rem;
   border-radius: 1rem;
   color: var(--text-color);
 }
-.copyright{
+.copyright {
   display: flex;
-  background: #505DED;
+  background: #505ded;
   height: 4rem;
   align-items: center;
   justify-content: center;
   color: #fff;
-  
 }
-.copyright a{
+.copyright a {
   color: var(--main-color);
 }
